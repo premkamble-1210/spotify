@@ -103,3 +103,50 @@ cards.forEach(card => {
         window.location = "playlist.html";
     });
 });
+let songsarr=[
+    {
+         img:'3-Idiots.jpg',
+         title:'GIVE ME SOME SUNSHINE',
+         src:'Give Me Some Sunshine - (Raag.Fm).mp3'
+
+    },
+    {
+         img:'Animal.jpg',
+         title:'Jamal Kudu',
+         src:'Jamal-Kudu(PagalWorldl).mp3'
+
+    },
+    {
+         img:'Duniyadari (Original Motion Picture Soundtrack).jpeg',
+         title:'Duniyadari',
+         src:'jindagy.mp3'
+
+    }
+]
+// song-img-img,song-info-title
+let sg=0;
+const nexttitile=document.querySelector(".song-info-title");
+const nextimg=document.querySelector(".song-img-img");
+const nextplay=document.querySelector(".next-song");
+const prevplay=document.querySelector(".prev-song");
+
+nextplay.addEventListener("click",()=>{
+   if (sg<songsarr.length) {
+    nextimg.src=songsarr[sg].img;
+    nexttitile.innerHTML=songsarr[sg].title;
+    audio.src=songsarr[sg].src;
+    sg++;
+   }else{
+    sg=0;
+   }
+})
+prevplay.addEventListener("click",()=>{
+   if (sg<songsarr.length) {
+    nextimg.src=songsarr[sg].img;
+    nexttitile.innerHTML=songsarr[sg].title;
+    audio.src=songsarr[sg].src;
+    sg++;
+   }else{
+    sg=0;
+   }
+})
